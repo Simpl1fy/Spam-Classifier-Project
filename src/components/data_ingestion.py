@@ -7,6 +7,11 @@ from src.logger import logging
 from src.exception import CustomException
 from dataclasses import dataclass
 
+from src.components.data_transformation import DataTransformationConfig
+from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
+
 @dataclass
 class DataIngestionConfig:
     raw_data_path:str = os.path.join("artifacts", "raw_data.csv")
@@ -37,4 +42,13 @@ class DataIngestion:
 
 if __name__ == "__main__":
     data_ingestion_obj = DataIngestion()
-    data_ingestion_obj.initiate_data_ingestion()
+    raw_data_path = data_ingestion_obj.initiate_data_ingestion()
+
+    data_transformation_object = DataTransformation()
+    data_processed = data_transformation_object.initiate_data_transformation(raw_data_path)
+
+    print(f"Shape of processed data is {data_processed.shape}")
+
+    model_trainer_object = ModelTrainer()
+    score = model_trainer_object.initiate_model_trainer(raw_data=data_processed)
+    print(f"Model score is {score}")
