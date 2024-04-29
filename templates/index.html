@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Spam Classifer</title>
+</head>
+<body>
+    <h1>SMS Spam Classifer</h1>
+    <form action="{{ url_for('prediction') }}" method="post">
+        <input type="text" name="text" id="sms"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Output: {{ output }}</h3>
+</body>
+</html>
