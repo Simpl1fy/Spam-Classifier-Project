@@ -11,7 +11,7 @@ def prediction():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        cd = CustomData(text=request.form.get('text'))
+        cd = CustomData(text=request.form.get('sms-text'))
         ser = cd.get_data_as_series()
         print(ser)
         print("Before Prediction")
@@ -21,7 +21,12 @@ def prediction():
         output = result[0]
         print('Prediction Completed')
         print(output)
-        return render_template('index.html', output=output)
+        if (output == 1):
+            res = "a spam✔️"
+        else:
+            res = "is not a spam❌"
+        print(res)
+        return render_template('index.html', output=res)
 
 if __name__ == "__main__":
     app.run(debug=True)

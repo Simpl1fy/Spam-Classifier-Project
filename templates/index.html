@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS Spam Classifer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS Spam Bot</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>SMS Spam Classifer</h1>
-    <form action="{{ url_for('prediction') }}" method="post">
-        <input type="text" name="text" id="sms"><br><br>
-        <input type="submit" value="Submit">
-    </form>
 
-    <h3>Output: {{ output }}</h3>
+    <div class="navbar">
+      <h1 id="heading">Spam Bot</h1>
+    </div>
+
+    <div id="form-container">
+      <form action="{{ url_for('prediction') }}" method="post" id="text-form">
+        <p id="container-heading">SMS Detect</p>
+        <textarea name="sms-text" id="text" cols="30" rows="40" placeholder="Enter the SMS text or paste it here"></textarea> <br><br>
+        <div id="output-submit">
+          <span style="font-size: 17px; color: rgb(70, 70, 70);">The SMS is {{ output }}</span>
+          <input type="submit" value="Check SMS" id="submit-button">
+        </div>
+      </form>
+      <form action="" id="text-form">
+        <p id="container-heading">Email Detect</p>
+        <textarea name="text" id="text" cols="30" rows="40" placeholder="Enter the Email text or paste it here"></textarea> <br><br>
+        <div id="output-submit">
+          <span style="font-size: 17px; color: rgb(70, 70, 70);">The Mail is ?</span>
+          <input type="submit" value="Check Mail" id="submit-button">
+        </div>
+      </form>
+    </div>
+    <div class="summary-container">
+      <div class="summary-heading">How it Works</div>
+      <div class="card-row">
+        <div class="summary-card">
+          <div class="card-header">
+            <div class="card-heading">SMS</div>
+            <div class="card-explained">Everyday SMS can be used to scam people, <br> Be sure to check if it is a spam or not.</div>
+          </div>
+          <div class="card-content">
+            <div class="cardinput-text">
+              <h5 class="content-input-heading">Input</h5>
+              <p class="input-example">Is this your bank account number XXXXXXXXX252, you have own a lot of money, congratulations.</p>
+              <h5 class="content-output-heading">Output</h5>
+              <p class="output-example">This SMS is a spam✔️</p>
+            </div>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="card-header">
+            <div class="card-heading">Email</div>
+            <div class="card-explained">Email are the main source of spams which may lead to hacked devices and accounts. <br>For which checking if the mail is spam or not is really useful and may come in handy.</div>
+          </div>
+          <div class="card-content">
+            <div class="cardinput-text">
+              <h5 class="content-input-heading">Input</h5>
+              <p class="input-example">Is this your bank account number XXXXXXXXX252, you have own a lot of money, congratulations.</p>
+              <h5 class="content-output-heading">Output</h5>
+              <p class="output-example">This Email is a spam✔️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 </html>

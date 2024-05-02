@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: white;
+	border-bottom: 1px solid grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#heading {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 22px;
+	padding-left: 7px;
+	color: rgb(70, 70, 70);
+	padding-left: 20px;
+}
+
+#form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(254, 249, 235);
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+#text-form {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-shadow: 1px 1px rgba(0,0,0,0.3);
+	background-color: white;
+}
+
+#container-heading {
+	text-align: center;
+	font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: rgb(70, 70, 70);
+}
+
+#text {
+	resize: none;
+	width:600px;
+	height: 300px;
+	border:none;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-size: 18px;
+}
+
+#text:focus {
+	outline: none;
+}
+
+#output-submit {
+	margin-left: 5px;
+	margin-right: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+#submit-button {
+	width: 150px;
+	margin: 5px;
+	padding: 5px 17px;
+	background-color:rgb(23, 135, 51);
+	color: white;
+	border: none;
+	border-radius: 25px;
+	font-size: 17px;
+	box-shadow: 2px 2px rgba(0,0,0,0.3);
+}
+
+#submit-button:hover {
+	cursor: pointer;
+	background-color: rgb(18, 192, 18);
+	width: 160px;
+	transition: background-color 0.25s;
+	transition: width 0.25s;
+}
+
+.summary-container {
+	background-color: rgb(244, 244, 244);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.summary-heading {
+	font-size: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px
+}
+.summary-card {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	width: 600px;
+	background-color: white;
+}
+
+.card-heading {
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.card-content {
+	border: 1px solid grey;
+	border-radius: 10px;
+	padding: 10px 10px;
+	margin-top: 10px;
+	background-color: rgb(244, 244, 244);
+}
+
+.content-input-heading, .content-output-heading {
+	margin-top: 7px;
+	margin-bottom: 0px;
+	font-size: 15px;
+}
+
+.input-example, .output-example {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.card-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
