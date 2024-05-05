@@ -7,7 +7,7 @@ import pandas as pd
 from src.exception import CustomException
 from src.utils import load_object
 
-class PredictPipeline:
+class SMSPredictPipeline:
     def __init__(self):
         pass
 
@@ -43,5 +43,31 @@ class CustomData:
             data = np.array([self.text])
             ser = pd.Series(data, index=[0])
             return ser
+        except Exception as e:
+            raise CustomException(e, sys)
+
+
+class EmailPredictPipeline:
+    def __init__(self):
+        pass
+
+    def predict(self, ser):
+        try:
+            model_path = os.path.join('artifacts', 'email_model.pkl')
+            preprocessor_path = os.path.join('artifacts', 'email_processor.pkl')
+
+            print('before loading')
+            model = load_object(model_path)
+            preprocessor = load_object(preprocessor_path)
+
+            print("after loading")
+            data_scaled = preprocessor.transform(ser)
+            print(f"shape of data after processing is {data_scaled.shape}")
+
+            print(data_scaled)
+
+            pred = model.predict(data_scaled)
+            return pred
+
         except Exception as e:
             raise CustomException(e, sys)
