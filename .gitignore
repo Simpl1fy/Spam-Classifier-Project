@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#logs
+logs/
+
+#Data
+data/
+artifacts/email_raw_data.csv
+data/Email/combined_data_new.csv
+
 # C extensions
 *.so
 

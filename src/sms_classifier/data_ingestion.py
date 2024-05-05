@@ -7,10 +7,10 @@ from src.logger import logging
 from src.exception import CustomException
 from dataclasses import dataclass
 
-from src.sms_classifier.components.data_transformation import DataTransformationConfig
-from src.sms_classifier.components.data_transformation import DataTransformation
-from src.sms_classifier.components.model_trainer import ModelTrainerConfig
-from src.sms_classifier.components.model_trainer import ModelTrainer
+from src.sms_classifier.data_transformation import DataTransformationConfig
+from src.sms_classifier.data_transformation import DataTransformation
+from src.sms_classifier.model_trainer import ModelTrainerConfig
+from src.sms_classifier.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -24,7 +24,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info('Initiating Data Ingestion')
         try:
-            data = pd.read_csv('data/SMSSpamCollection', sep='\t', names=['label', 'message'])
+            data = pd.read_csv('data/SMS/SMSSpamCollection', sep='\t', names=['label', 'message'])
             logging.info("read the csv file as a dataframe")
 
             os.makedirs(os.path.dirname(self.data_ingestion_config.raw_data_path), exist_ok=True)
