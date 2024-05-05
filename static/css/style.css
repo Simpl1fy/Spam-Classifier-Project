@@ -33,7 +33,19 @@ body {
 	padding-top: 30px;
 }
 
-#text-form {
+#text-form-sms {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top:5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border: 1px solid grey;
+	border-radius: 10px;
+	box-shadow: 1px 1px rgba(0,0,0,0.3);
+	background-color: white;
+}
+
+#text-form-email {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top:5px;
@@ -53,7 +65,7 @@ body {
 	color: rgb(70, 70, 70);
 }
 
-#text {
+#sms-text, #email-text {
 	resize: none;
 	width:600px;
 	height: 300px;
@@ -63,7 +75,11 @@ body {
 	font-size: 18px;
 }
 
-#text:focus {
+#sms-text:focus {
+	outline: none;
+}
+
+#email-text:focus {
 	outline: none;
 }
 
@@ -75,7 +91,7 @@ body {
 	align-items: baseline;
 }
 
-#submit-button {
+#submit-button-sms, #submit-button-email {
 	width: 150px;
 	margin: 5px;
 	padding: 5px 17px;
@@ -87,7 +103,15 @@ body {
 	box-shadow: 2px 2px rgba(0,0,0,0.3);
 }
 
-#submit-button:hover {
+#submit-button-sms:hover {
+	cursor: pointer;
+	background-color: rgb(18, 192, 18);
+	width: 160px;
+	transition: background-color 0.25s;
+	transition: width 0.25s;
+}
+
+#submit-button-email:hover {
 	cursor: pointer;
 	background-color: rgb(18, 192, 18);
 	width: 160px;

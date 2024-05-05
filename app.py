@@ -6,12 +6,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/prediction', methods=['POST', 'GET'])
+@app.route('/smsprediction', methods=['POST', 'GET'])
 def sms_prediction():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        cd = CustomData(text=request.form.get('sms-text'))
+        cd = CustomData(text=request.form.get("sms-text"))
         ser = cd.get_data_as_series()
         print(ser)
         print("Before Prediction")
@@ -29,14 +29,12 @@ def sms_prediction():
         return render_template('index.html', sms_output=sms_res)
 
 
-@app.route('/prediction', methods=['POST', 'GET'])
+@app.route('/emailprediction', methods=['POST', 'GET'])
 def email_prediction():
-    if request.methods == 'GET':
+    if request.method == 'GET':
         return render_template('index.html')
     else:
-        input = request.form.get('email-text')
-        print(input)
-        cd = CustomData(text=input)
+        cd = CustomData(text=request.form.get("mail-text"))
         ser = cd.get_data_as_series()
         print(ser)
         print("Before Prediction")
@@ -49,7 +47,7 @@ def email_prediction():
         if (output == 1):
             email_res = "a spam✔️"
         else:
-            email_resres = "is not a spam❌"
+            email_res = "is not a spam❌"
         print(email_res)
         return render_template('index.html', email_output=email_res)
 

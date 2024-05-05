@@ -13,20 +13,20 @@
     </div>
 
     <div id="form-container">
-      <form action="{{ url_for('sms_prediction') }}" method="post" id="text-form">
+      <form action="{{ url_for('sms_prediction') }}" method="post" id="text-form-sms">
         <p id="container-heading">SMS Detect</p>
-        <textarea name="sms-text" id="text" cols="30" rows="40" placeholder="Enter the SMS text or paste it here"></textarea> <br><br>
+        <textarea name="sms-text" id="sms-text" cols="30" rows="40" placeholder="Enter the SMS text or paste it here"></textarea> <br><br>
         <div id="output-submit">
           <span style="font-size: 17px; color: rgb(70, 70, 70);">The SMS is {{ sms_output }}</span>
-          <input type="submit" value="Check SMS" id="submit-button">
+          <input type="submit" value="Check SMS" id="submit-button-sms">
         </div>
       </form>
-      <form action="{{ url_for('email_prediction') }}" method="post" id="text-form">
+      <form action="{{ url_for('email_prediction') }}" method="post" id="text-form-email">
         <p id="container-heading">Email Detect</p>
-        <textarea name="email-text" id="text" cols="30" rows="40" placeholder="Enter the Email text or paste it here"></textarea> <br><br>
+        <textarea name="mail-text" id="email-text" cols="30" rows="40" placeholder="Enter the SMS text or paste it here"></textarea> <br><br>
         <div id="output-submit">
           <span style="font-size: 17px; color: rgb(70, 70, 70);">The Mail is {{ email_output }}</span>
-          <input type="submit" value="Check Mail" id="submit-button">
+          <input type="submit" value="Check Mail" id="submit-button-email">
         </div>
       </form>
     </div>
