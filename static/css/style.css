@@ -65,7 +65,7 @@ body {
 	color: rgb(70, 70, 70);
 }
 
-#sms-text, #email-text {
+#sms-text, #mail-text {
 	resize: none;
 	width:600px;
 	height: 300px;
@@ -79,7 +79,7 @@ body {
 	outline: none;
 }
 
-#email-text:focus {
+#mail-text:focus {
 	outline: none;
 }
 
