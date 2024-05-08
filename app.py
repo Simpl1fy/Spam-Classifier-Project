@@ -11,7 +11,8 @@ def sms_prediction():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        cd = CustomData(text=request.form.get("sms-text"))
+        print('This is SMS Prediction function')
+        cd = CustomData(text=request.form.get("text"))
         ser = cd.get_data_as_series()
         print(ser)
         print("Before Prediction")
@@ -26,7 +27,7 @@ def sms_prediction():
         else:
             sms_res = "is not a spam❌"
         print(sms_res)
-        return render_template('index.html', sms_output=sms_res)
+        return render_template('index.html', sms_output=sms_res, email_output="")
 
 
 @app.route('/emailprediction', methods=['POST', 'GET'])
@@ -34,7 +35,8 @@ def email_prediction():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        cd = CustomData(text=request.form.get("mail-text"))
+        print('This is email prediction function')
+        cd = CustomData(text=request.form.get("text"))
         ser = cd.get_data_as_series()
         print(ser)
         print("Before Prediction")
@@ -49,7 +51,7 @@ def email_prediction():
         else:
             email_res = "is not a spam❌"
         print(email_res)
-        return render_template('index.html', email_output=email_res)
+        return render_template('index.html', email_output=email_res, sms_output="")
 
 
 if __name__ == "__main__":

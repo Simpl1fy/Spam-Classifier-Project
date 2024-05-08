@@ -13,6 +13,58 @@ body {
 	padding-bottom: 10px;
 }
 
+.navbar {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	border-bottom: 1px solid grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 40px;
+}
+
+
+.mode-selector {
+	padding-left: 10px;
+	display: flex;
+	justify-content: left;
+	border-bottom: 1px solid grey;
+	align-items: center;
+	height: 40px;
+}
+
+
+
+.sms-b, .email-b {
+	margin-left: 10px;
+	background-color: white;
+	border: none;
+	font-size: 15px;
+	margin-top:0px;
+	margin-bottom: 0px;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sms-b:hover {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+.email-b:hover {
+	cursor: pointer;
+	background-color: lightgrey;
+}
+
+.active {
+	color: rgb(23, 135, 51);
+	border-bottom: 2px solid rgb(23, 135, 51);
+}
+
+
 
 #heading {
 	margin-top: 0px;
@@ -26,6 +78,7 @@ body {
 
 #form-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(254, 249, 235);
@@ -33,7 +86,7 @@ body {
 	padding-top: 30px;
 }
 
-#text-form-sms {
+#text-form {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top:5px;
@@ -65,7 +118,7 @@ body {
 	color: rgb(70, 70, 70);
 }
 
-#sms-text, #mail-text {
+#text, #mail-text {
 	resize: none;
 	width:600px;
 	height: 300px;
@@ -75,7 +128,7 @@ body {
 	font-size: 18px;
 }
 
-#sms-text:focus {
+#text:focus {
 	outline: none;
 }
 
