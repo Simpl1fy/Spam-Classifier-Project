@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spam Detector</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">	
 </head>
 <body>
 
@@ -24,7 +26,7 @@
           <div class="result-flex">
             <!-- <span style="font-size: 17px; color: rgb(70, 70, 70);">{{sms_output}}</span>
             <span style="font-size: 17px; color: rgb(70, 70, 70);">{{email_output}}</span   -->
-              Result: 
+              <div class="res" style="font-size: 17px; font-weight: bold;">Result: </div> 
               <div class="sms-res">{{sms_output}}</div>
               <div class="email-res">{{email_output}}</div>
           </div>
@@ -63,6 +65,43 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-row">
+        <div class="column">
+          <div class="heading">Important Links</div>
+          <ul class="list">
+            <li class="li-ele"><a href="https://docs.python.org/3/" target="_blank">Python</a></li>
+            <li class="li-ele"><a href="https://pandas.pydata.org/docs/" target="_blank">Pandas</a></li>
+            <li class="li-ele"><a href="https://numpy.org/doc/" target="_blank">Numpy</a></li>
+            <li class="li-ele"><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank">Scikit-Learn</a></li>
+            <li class="li-ele"><a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">Flask</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="heading">Github<i class="fa-brands fa-github"></i></div>
+          <ul class="list">
+            <li class="li-ele"><a href="https://github.com/Simpl1fy" target="_blank">Gourab Das</a></li>
+            <li class="li-ele"><a href="" target="_blank">Arijit Paul</a></li>
+            <li class="li-ele"><a href="https://github.com/Arkajit-paul" target="_blank">Arkajit Paul</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="heading">Contact Us</div>
+          <ul class="list">
+            <li class="li-ele"><a href="" target="_blank">Gmail<i class="fa-regular fa-envelope"></i></a></li>
+            <li class="li-ele"><a href="" target="_blank">Twitter<i class="fa-brands fa-x-twitter"></i></a></li>
+            <li class="li-ele"><a href="" target="_blank">Linkedin<i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="heading">Creator</div>
+          <ul class="list">
+            <li class="li-ele"><a href="" target="_blank">Know About Us</a></li>
+          </ul>
+        </div>
+      </div>
       </div>
     </div>
     <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>

@@ -1,0 +1,39 @@
+.footer {
+    padding: 20px 10px;
+    background-color: rgb(0, 0, 48);
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column {
+    margin-right: 30px;
+}
+
+.heading {
+    font-size: 20px;
+}
+
+.list {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.li-ele {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+}
+
+a:hover {
+    color: white;
+}
