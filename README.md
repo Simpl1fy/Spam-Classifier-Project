@@ -24,7 +24,9 @@ This Project is my final year project based on Machine Learning/Deep Learning/AI
 ## How to install and run Project
 
 Clone the repository in your system
-```git clone https://github.com/Simpl1fy/Spam-Classifier-Project.git```
+```
+git clone https://github.com/Simpl1fy/Spam-Classifier-Project.git
+```
 
 Open the directory in VSCode terminal(cmd) or CommandPrompt(cmd) and
 ```
