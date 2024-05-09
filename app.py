@@ -23,9 +23,9 @@ def sms_prediction():
         print('Prediction Completed')
         print(output)
         if (output == 1):
-            sms_res = "a spam✔️"
+            sms_res = "SMS is a spam✔️"
         else:
-            sms_res = "is not a spam❌"
+            sms_res = "Email is not a spam❌"
         print(sms_res)
         return render_template('index.html', sms_output=sms_res, email_output="")
 
@@ -47,9 +47,9 @@ def email_prediction():
         print('Prediction Completed')
         print(output)
         if (output == 1):
-            email_res = "a spam✔️"
+            email_res = "Email is a spam✔️"
         else:
-            email_res = "is not a spam❌"
+            email_res = "Email is not a spam❌"
         print(email_res)
         return render_template('index.html', email_output=email_res, sms_output="")
 

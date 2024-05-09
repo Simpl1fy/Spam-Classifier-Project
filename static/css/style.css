@@ -1,28 +1,26 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: white;
-	border-bottom: 1px solid grey;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.navbar {
+#navbar {
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
-	border-bottom: 1px solid grey;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-color: #333;
+	color: white;
+	font-size: 30px;
+	border-bottom: 1px solid white;
+	padding: 10px 10px;
 	height: 40px;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 
@@ -65,17 +63,6 @@ body {
 }
 
 
-
-#heading {
-	margin-top: 0px;
-	margin-bottom: 5px;
-	text-align: center;
-	font-size: 22px;
-	padding-left: 7px;
-	color: rgb(70, 70, 70);
-	padding-left: 20px;
-}
-
 #form-container {
 	display: flex;
 	flex-direction: column;
@@ -83,42 +70,21 @@ body {
 	align-items: center;
 	background-color: rgb(254, 249, 235);
 	padding-bottom: 30px;
-	padding-top: 30px;
+	padding-top: 80px;
 }
 
 #text-form {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top:5px;
-	margin-bottom: 5px;
-	padding: 5px;
+	margin: 0px 20px;
+	padding: 0px 5px;
+	padding-bottom: 5px;
 	border: 1px solid grey;
 	border-radius: 10px;
 	box-shadow: 1px 1px rgba(0,0,0,0.3);
 	background-color: white;
+	width: 800px;
 }
 
-#text-form-email {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top:5px;
-	margin-bottom: 5px;
-	padding: 5px;
-	border: 1px solid grey;
-	border-radius: 10px;
-	box-shadow: 1px 1px rgba(0,0,0,0.3);
-	background-color: white;
-}
-
-#container-heading {
-	text-align: center;
-	font-size: 17px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	color: rgb(70, 70, 70);
-}
-
-#text, #mail-text {
+#text {
 	resize: none;
 	width:600px;
 	height: 300px;
@@ -132,10 +98,6 @@ body {
 	outline: none;
 }
 
-#mail-text:focus {
-	outline: none;
-}
-
 #output-submit {
 	margin-left: 5px;
 	margin-right: 5px;
@@ -144,7 +106,18 @@ body {
 	align-items: baseline;
 }
 
-#submit-button-sms, #submit-button-email {
+.result-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: baseline;
+}
+
+.sms-res, .email-res {
+	padding-left: 5px;	
+}
+
+#submit-button {
 	width: 150px;
 	margin: 5px;
 	padding: 5px 17px;
@@ -156,15 +129,7 @@ body {
 	box-shadow: 2px 2px rgba(0,0,0,0.3);
 }
 
-#submit-button-sms:hover {
-	cursor: pointer;
-	background-color: rgb(18, 192, 18);
-	width: 160px;
-	transition: background-color 0.25s;
-	transition: width 0.25s;
-}
-
-#submit-button-email:hover {
+#submit-button:hover {
 	cursor: pointer;
 	background-color: rgb(18, 192, 18);
 	width: 160px;
