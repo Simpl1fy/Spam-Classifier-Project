@@ -14,7 +14,7 @@ body {
 	font-size: 30px;
 	border-bottom: 1px solid white;
 	padding: 10px 10px;
-	height: 40px;
+	height: 30px;
 }
 
 .sticky {
@@ -70,7 +70,7 @@ body {
 	align-items: center;
 	background-color: rgb(254, 249, 235);
 	padding-bottom: 30px;
-	padding-top: 80px;
+	padding-top: 30px;
 }
 
 #text-form {
