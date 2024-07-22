@@ -48,14 +48,9 @@ body {
 	font-weight: 600;
 }
 
-.sms-b:hover {
+.sms-b:hover, .email-b:hover {
 	cursor: pointer;
-	background-color: lightgrey;
-}
-
-.email-b:hover {
-	cursor: pointer;
-	background-color: lightgrey;
+	background-color: rgb(230, 230, 230);
 }
 
 .active {
