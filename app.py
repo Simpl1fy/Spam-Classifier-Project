@@ -27,7 +27,7 @@ def sms_prediction():
         else:
             sms_res = "SMS is not a spam❌"
         print(sms_res)
-        return render_template('index.html', sms_output=sms_res, email_output="")
+        return render_template('index.html', output=sms_res)
 
 
 @app.route('/emailprediction', methods=['POST', 'GET'])
@@ -51,7 +51,7 @@ def email_prediction():
         else:
             email_res = "Email is not a spam❌"
         print(email_res)
-        return render_template('index.html', email_output=email_res, sms_output="")
+        return render_template('index.html', output=email_res)
     
 @app.route('/aboutus')
 def aboutFunction():

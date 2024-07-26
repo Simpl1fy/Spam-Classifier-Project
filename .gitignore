@@ -6,6 +6,9 @@ __pycache__/
 #logs
 logs/
 
+#images
+static/css/images/
+
 #Data
 data/
 artifacts/email_raw_data.csv

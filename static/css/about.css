@@ -60,7 +60,7 @@
   .second-image,
   .third-image {
     margin-top: -150px;
-    background-image: url(./roni.jpg);
+    background-image: url(./images/roni.jpg);
     background-size: cover; /* Cover the entire element */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -72,10 +72,10 @@
     animation: floatAnimation 3s infinite alternate;
   }
   .second-image {
-    background-image: url(./boni.jpg);
+    background-image: url(./images/boni.jpg);
   }
   .third-image {
-    background-image: url(./gd.jpg);
+    background-image: url(./images/gd.jpg);
   }
   
   @keyframes floatAnimation {
