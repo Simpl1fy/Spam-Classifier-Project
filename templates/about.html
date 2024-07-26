@@ -10,8 +10,9 @@
     <div class="head-wrapper">
       <span>spam checker</span>
       <ol>
-        <li onclick="handlePageChange('index.html')" id="home">Home</li>
-        <li onclick="handlePageChange('about.html')" id="about">About us</li>
+        <li onclick="handlePageChange('/')" id="home">Home</li>
+        <!-- <li onclick="handlePageChange('about.html')" id="about">About us</li> -->
+        <li onclick="handleAboutChange()" id="about">About us</li>
       </ol>
     </div>
     <div class="main-secation">
@@ -36,6 +37,11 @@
       function handlePageChange(url) {
         // Navigate to the new URL
         window.location.href = url;
+      }
+      const handleAboutChange = () => {
+        var currentUrl = window.location.href;
+        // console.log(currentUrl);
+        window.location.href = currentUrl;
       }
 
       function addClassBasedOnURL() {
