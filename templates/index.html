@@ -21,11 +21,9 @@
           <button class="btn sms-b active" id="sms-selector">SMS</button>
           <button class="btn email-b" id="email-selector">Email</button>
         </div>
-        <textarea name="text" id="text" cols="30" rows="40" placeholder="Enter the text or paste it here" required></textarea> <br><br>
+        <textarea name="text" id="text" cols="40" rows="40" placeholder="Enter the text or paste it here" required></textarea> <br><br>
         <div id="output-submit">
           <div class="result-flex">
-            <!-- <span style="font-size: 17px; color: rgb(70, 70, 70);">{{sms_output}}</span>
-            <span style="font-size: 17px; color: rgb(70, 70, 70);">{{email_output}}</span   -->
               <div class="res" style="font-size: 17px; font-weight: bold;">Result: </div> 
               <div class="sms-res">{{sms_output}}</div>
               <div class="email-res">{{email_output}}</div>
@@ -98,7 +96,7 @@
         <div class="column">
           <div class="heading">Creator</div>
           <ul class="list">
-            <li class="li-ele"><a href="" target="_blank">Know About Us</a></li>
+            <li class="li-ele"><a href="{{ url_for('aboutFunction') }}" target="_blank">Know About Us</a></li>
           </ul>
         </div>
       </div>

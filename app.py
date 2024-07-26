@@ -52,7 +52,10 @@ def email_prediction():
             email_res = "Email is not a spam❌"
         print(email_res)
         return render_template('index.html', email_output=email_res, sms_output="")
-
+    
+@app.route('/aboutus')
+def aboutFunction():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

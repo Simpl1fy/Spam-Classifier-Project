@@ -1,4 +1,4 @@
-console.log('Hello Worlds')
+// console.log('Hello Worlds')
 
 var form = document.getElementById("text-form");
 
