@@ -37,6 +37,11 @@
     cursor: pointer;
   }
 
+  .head-wrapper > ol > li > a {
+    color: #000;
+    text-decoration: none;
+  }
+
 .main-secation {
     position: relative;
     height: calc(100vh - 12vh);
