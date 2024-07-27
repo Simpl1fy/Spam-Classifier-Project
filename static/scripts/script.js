@@ -1,3 +1,31 @@
+// function handleStickyHeader() {
+//   const header = document.querySelector('.head-wrapper');
+//   const sticky = header.offsetTop;
+
+//   // Function to add or remove sticky class
+//   function stickyHeader() {
+//     if (window.pageYOffset > sticky) {
+//       header.classList.add('fixed');
+//     } else {
+//       header.classList.remove('fixed');
+//     }
+//   }
+
+//   // Add the sticky class on scroll
+//   window.addEventListener('scroll', stickyHeader);
+// }
+
+// // Initialize the sticky header functionality
+// document.addEventListener('DOMContentLoaded', handleStickyHeader);
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   var form = document.getElementById("text-form");
   var modeBtns = document.getElementsByClassName('btn');

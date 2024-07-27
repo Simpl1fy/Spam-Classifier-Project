@@ -37,6 +37,11 @@
         // Navigate to the new URL
         window.location.href = url;
       }
+      const handleAboutChange = () => {
+        var currentUrl = window.location.href;
+        // console.log(currentUrl);
+        window.location.href = currentUrl;
+      }
 
       function addClassBasedOnURL() {
         // Get the current URL and extract the last part of the URL
